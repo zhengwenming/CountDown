@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70A078601C60A5C500F8C188 /* countDown.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70A0785F1C60A5C500F8C188 /* countDown.gif */; };
 		70A541601C3E736A00EE3E17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A5415F1C3E736A00EE3E17 /* main.m */; };
 		70A541631C3E736A00EE3E17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A541621C3E736A00EE3E17 /* AppDelegate.m */; };
 		70A541661C3E736A00EE3E17 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A541651C3E736A00EE3E17 /* ViewController.m */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70A0785F1C60A5C500F8C188 /* countDown.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = countDown.gif; sourceTree = "<group>"; };
 		70A5415B1C3E736A00EE3E17 /* 倒计时.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "倒计时.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70A5415F1C3E736A00EE3E17 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		70A541611C3E736A00EE3E17 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				70A541671C3E736A00EE3E17 /* Main.storyboard */,
 				70A5416A1C3E736A00EE3E17 /* Assets.xcassets */,
 				70A5416C1C3E736A00EE3E17 /* LaunchScreen.storyboard */,
+				70A0785F1C60A5C500F8C188 /* countDown.gif */,
 				70A5416F1C3E736A00EE3E17 /* Info.plist */,
 				70A5415E1C3E736A00EE3E17 /* Supporting Files */,
 			);
@@ -138,6 +141,7 @@
 			files = (
 				70A5416E1C3E736A00EE3E17 /* LaunchScreen.storyboard in Resources */,
 				70A5416B1C3E736A00EE3E17 /* Assets.xcassets in Resources */,
+				70A078601C60A5C500F8C188 /* countDown.gif in Resources */,
 				70A541691C3E736A00EE3E17 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +308,7 @@
 				70A541741C3E736A00EE3E17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
