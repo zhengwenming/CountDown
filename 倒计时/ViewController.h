@@ -10,10 +10,7 @@
 
 @interface ViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *dayLabel;
-@property (weak, nonatomic) IBOutlet UILabel *hourLabel;
-@property (weak, nonatomic) IBOutlet UILabel *minuteLabel;
-@property (weak, nonatomic) IBOutlet UILabel *secondLabel;
+
 
 @end
 
