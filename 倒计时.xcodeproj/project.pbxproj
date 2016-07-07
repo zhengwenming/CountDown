@@ -25,6 +25,7 @@
 		376105F81D2B6C4400DF3435 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 376105EE1D2B6C4400DF3435 /* View+MASAdditions.m */; };
 		376105FE1D2B71D000DF3435 /* UIView+ArrangeSubview.m in Sources */ = {isa = PBXBuildFile; fileRef = 376105FD1D2B71D000DF3435 /* UIView+ArrangeSubview.m */; };
 		376106021D2B9FE200DF3435 /* CountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 376106011D2B9FE200DF3435 /* CountDown.m */; };
+		37B431EE1D2E72DD00AA5DB5 /* countDown.gif in Resources */ = {isa = PBXBuildFile; fileRef = 37B431ED1D2E72DD00AA5DB5 /* countDown.gif */; };
 		70A541601C3E736A00EE3E17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A5415F1C3E736A00EE3E17 /* main.m */; };
 		70A541631C3E736A00EE3E17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A541621C3E736A00EE3E17 /* AppDelegate.m */; };
 		70A541661C3E736A00EE3E17 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A541651C3E736A00EE3E17 /* ViewController.m */; };
@@ -70,6 +71,7 @@
 		376105FD1D2B71D000DF3435 /* UIView+ArrangeSubview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ArrangeSubview.m"; sourceTree = "<group>"; };
 		376106001D2B9FE200DF3435 /* CountDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDown.h; sourceTree = "<group>"; };
 		376106011D2B9FE200DF3435 /* CountDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDown.m; sourceTree = "<group>"; };
+		37B431ED1D2E72DD00AA5DB5 /* countDown.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = countDown.gif; sourceTree = "<group>"; };
 		70A5415B1C3E736A00EE3E17 /* 倒计时.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "倒计时.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70A5415F1C3E736A00EE3E17 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		70A541611C3E736A00EE3E17 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				37590F681D2D195B00467010 /* shop.png */,
+				37B431ED1D2E72DD00AA5DB5 /* countDown.gif */,
 				70A5415F1C3E736A00EE3E17 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -246,6 +249,7 @@
 				70A5416B1C3E736A00EE3E17 /* Assets.xcassets in Resources */,
 				37590F671D2D16AE00467010 /* CountDownCell.xib in Resources */,
 				37590F691D2D195B00467010 /* shop.png in Resources */,
+				37B431EE1D2E72DD00AA5DB5 /* countDown.gif in Resources */,
 				37590F621D2CC46600467010 /* CountDownInCellViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
