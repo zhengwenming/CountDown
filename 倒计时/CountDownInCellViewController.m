@@ -33,36 +33,48 @@
 -(NSString *)getNowTimeWithString:(NSString *)aTimeString{
     NSDateFormatter* formater = [[NSDateFormatter alloc] init];
     [formater setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    NSDate* fireDate = [formater dateFromString:aTimeString];
-    NSDate *today = [NSDate date];
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    unsigned int unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
-    NSDateComponents *d = [calendar components:unitFlags fromDate:today toDate:fireDate options:0];//计算时间差
-    long hour = [d day] *24 + [d hour];
-    NSString *seconds;
-    NSString *minutes;
-    NSString *hours;
-    if([d second]<10)
-        seconds = [NSString stringWithFormat:@"%ld",[d second]];
+    // 截止时间date格式
+    NSDate  *expireDate = [formater dateFromString:aTimeString];
+    NSDate  *nowDate = [NSDate date];
+    // 当前时间字符串格式
+    NSString *nowDateStr = [formater stringFromDate:nowDate];
+    // 当前时间date格式
+    nowDate = [formater dateFromString:nowDateStr];
+  
+    NSTimeInterval timeInterval =[expireDate timeIntervalSinceDate:nowDate];
+    
+    int days = (int)(timeInterval/(3600*24));
+    int hours = (int)((timeInterval-days*24*3600)/3600);
+    int minutes = (int)(timeInterval-days*24*3600-hours*3600)/60;
+    int seconds = timeInterval-days*24*3600-hours*3600-minutes*60;
+    
+    NSString *dayStr;NSString *hoursStr;NSString *minutesStr;NSString *secondsStr;
+    //天
+    dayStr = [NSString stringWithFormat:@"%d",days];
+    //小时
+    hoursStr = [NSString stringWithFormat:@"%d",hours];
+   //分钟
+    if(minutes<10)
+        minutesStr = [NSString stringWithFormat:@"0%d",minutes];
     else
-        seconds = [NSString stringWithFormat:@"%ld",[d second]];
-    if([d minute]<10)
-        minutes = [NSString stringWithFormat:@"%ld",[d minute]];
+        minutesStr = [NSString stringWithFormat:@"%d",minutes];
+    //秒
+    if(seconds < 10)
+        secondsStr = [NSString stringWithFormat:@"0%d", seconds];
     else
-        minutes = [NSString stringWithFormat:@"%ld",[d minute]];
-    if(hour < 10)
-        hours = [NSString stringWithFormat:@"%ld", hour];
-    else
-        hours = [NSString stringWithFormat:@"%ld",hour];
-    if (hour<=0||minutes<=0||seconds<=0) {
+        secondsStr = [NSString stringWithFormat:@"%d",seconds];
+    if (hours<=0&&minutes<=0&&seconds<=0) {
         return @"活动已经结束！";
     }
-    return [NSString stringWithFormat:@"%@小时 %@分 %@秒", hours, minutes,seconds];
+    if (days) {
+        return [NSString stringWithFormat:@"%@天 %@小时 %@分 %@秒", dayStr,hoursStr, minutesStr,secondsStr];
+    }
+    return [NSString stringWithFormat:@"%@小时 %@分 %@秒",hoursStr , minutesStr,secondsStr];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"cell中倒计时";
-    dataSource = @[@"2016-07-06 20:23:10",@"2016-07-07 17:23:20",@"2016-07-08 13:23:30",@"2016-07-09 22:23:40",@"2016-07-10 18:23:50",@"2016-07-11 20:23:12",@"2016-07-12 10:23:22",@"2016-07-13 19:23:32",@"2016-07-14 22:23:42",@"2016-07-15 11:23:52",@"2016-07-16 20:23:26",@"2016-07-17 15:23:20",@"2016-07-18 12:23:18",@"2016-07-19 22:23:28",@"2016-07-22 19:23:33",@"2016-07-21 20:23:55",@"2016-07-22 21:20:21",@"2016-07-23 16:23:11",@"2016-07-24 22:23:49",@"2016-07-25 14:23:43",@"2016-07-26 14:23:14",@"2016-07-27 14:23:41",@"2016-07-28 14:23:46",@"2016-07-29 14:23:23",@"2016-07-30 14:23:43",@"2016-08-01 14:23:45",@"2016-08-02 14:23:22",@"2016-08-03 14:23:40",];
+    dataSource = @[@"2016-07-24 22:23:49",@"2016-07-25 14:23:43",@"2016-07-26 14:23:14",@"2016-07-27 14:23:41",@"2016-07-28 14:11:46",@"2016-07-29 14:23:23",@"2016-07-30 14:23:43",@"2016-08-01 14:12:45",@"2016-08-02 14:23:22",@"2016-08-03 14:23:40",@"2016-08-04 14:13:40",@"2016-08-05 14:23:45",@"2016-08-06 14:23:45",@"2016-08-07 14:14:41",@"2016-08-08 14:23:50",@"2016-08-09 14:23:45",@"2016-08-10 14:15:42",@"2016-08-11 14:23:51",@"2016-08-12 14:28:45",@"2016-08-13 14:16:43",@"2016-08-14 14:23:52",@"2016-08-15 14:29:45",@"2016-08-16 14:17:44",@"2016-08-17 14:23:53",@"2016-08-18 14:30:45",@"2016-08-19 14:18:45",@"2016-08-20 14:23:54",@"2016-08-21 14:31:01",@"2016-08-22 14:19:30",@"2016-08-23 14:23:55",@"2016-08-24 14:32:02",@"2016-08-25 14:20:31",@"2016-08-26 14:23:56",@"2016-08-27 14:33:03",@"2016-08-28 14:21:12",@"2016-08-29 14:23:45",@"2016-08-30 14:34:04",@"2016-08-31 14:23:32",@"2016-09-01 14:23:49",@"2016-09-02 14:04:05",@"2016-09-03 14:23:05",@"2016-09-04 14:24:09",@"2016-09-05 14:14:06",@"2016-09-06 14:24:02",@"2016-09-07 14:24:10",@"2016-09-08 14:24:07",@"2016-09-09 14:25:01",@"2016-09-10 14:24:11",@"2016-09-11 14:34:08",@"2016-09-12 14:26:03",];
     self.countDown = [[CountDown alloc] init];
     __weak __typeof(self) weakSelf= self;
     ///每秒回调一次
@@ -101,5 +113,20 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
+/**
+ * 根据传入的年份和月份获得该月份的天数
+ *
+ * @param year
+ *            年份-正整数
+ * @param month
+ *            月份-正整数
+ * @return 返回天数
+ */
+-(NSInteger)getDayNumberWithYear:(NSInteger )y month:(NSInteger )m{
+    int days[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+    if (2 == m && 0 == (y % 4) && (0 != (y % 100) || 0 == (y % 400))) {
+        days[1] = 29;
+    }
+    return (days[m - 1]);
+}
 @end

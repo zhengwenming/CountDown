@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "11FFB93AD44C05EF6C7C3D98E4624C0D050C34D3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1EEB23244A8CA920AFC1918D04BBF6CB0D6BF90F" : 0,
+    "11FFB93AD44C05EF6C7C3D98E4624C0D050C34D3" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "CAD3E85E-F323-4415-8676-D2A16757AF37",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1EEB23244A8CA920AFC1918D04BBF6CB0D6BF90F" : "",
+    "11FFB93AD44C05EF6C7C3D98E4624C0D050C34D3" : "CountDown\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "倒计时",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "倒计时.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zhengwenming\/CountDown.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "11FFB93AD44C05EF6C7C3D98E4624C0D050C34D3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zhengwenming\/WMPlayer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1EEB23244A8CA920AFC1918D04BBF6CB0D6BF90F"
+    }
+  ]
+}

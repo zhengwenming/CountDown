@@ -18,4 +18,5 @@
 ///每秒走一次，回调block
 -(void)countDownWithPER_SECBlock:(void (^)())PER_SECBlock;
 -(void)destoryTimer;
+-(NSDate *)dateWithLongLong:(long long)longlongValue;
 @end
