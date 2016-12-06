@@ -11,7 +11,6 @@
 		37590F621D2CC46600467010 /* CountDownInCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37590F601D2CC46600467010 /* CountDownInCellViewController.xib */; };
 		37590F661D2D16AE00467010 /* CountDownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37590F641D2D16AE00467010 /* CountDownCell.m */; };
 		37590F671D2D16AE00467010 /* CountDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37590F651D2D16AE00467010 /* CountDownCell.xib */; };
-		37590F691D2D195B00467010 /* shop.png in Resources */ = {isa = PBXBuildFile; fileRef = 37590F681D2D195B00467010 /* shop.png */; };
 		376105D01D2B529300DF3435 /* CountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 376105CE1D2B529300DF3435 /* CountDownViewController.m */; };
 		376105D71D2B646D00DF3435 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376105D61D2B646D00DF3435 /* Main.storyboard */; };
 		376105F01D2B6C4400DF3435 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 376105DA1D2B6C4400DF3435 /* MASCompositeConstraint.m */; };
@@ -31,6 +30,8 @@
 		70A541661C3E736A00EE3E17 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A541651C3E736A00EE3E17 /* ViewController.m */; };
 		70A5416B1C3E736A00EE3E17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70A5416A1C3E736A00EE3E17 /* Assets.xcassets */; };
 		70A5416E1C3E736A00EE3E17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70A5416C1C3E736A00EE3E17 /* LaunchScreen.storyboard */; };
+		BFB1F4EB1DF6AC63005DB822 /* shop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB1F4E91DF6AC63005DB822 /* shop@2x.png */; };
+		BFB1F4EC1DF6AC63005DB822 /* shop@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB1F4EA1DF6AC63005DB822 /* shop@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +41,6 @@
 		37590F631D2D16AE00467010 /* CountDownCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownCell.h; sourceTree = "<group>"; };
 		37590F641D2D16AE00467010 /* CountDownCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownCell.m; sourceTree = "<group>"; };
 		37590F651D2D16AE00467010 /* CountDownCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountDownCell.xib; sourceTree = "<group>"; };
-		37590F681D2D195B00467010 /* shop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop.png; sourceTree = "<group>"; };
 		376105CD1D2B529300DF3435 /* CountDownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownViewController.h; sourceTree = "<group>"; };
 		376105CE1D2B529300DF3435 /* CountDownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownViewController.m; sourceTree = "<group>"; };
 		376105D61D2B646D00DF3435 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -81,6 +81,8 @@
 		70A5416A1C3E736A00EE3E17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70A5416D1C3E736A00EE3E17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70A5416F1C3E736A00EE3E17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFB1F4E91DF6AC63005DB822 /* shop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop@2x.png"; sourceTree = "<group>"; };
+		BFB1F4EA1DF6AC63005DB822 /* shop@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,7 +182,8 @@
 		70A5415E1C3E736A00EE3E17 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				37590F681D2D195B00467010 /* shop.png */,
+				BFB1F4E91DF6AC63005DB822 /* shop@2x.png */,
+				BFB1F4EA1DF6AC63005DB822 /* shop@3x.png */,
 				37B431ED1D2E72DD00AA5DB5 /* countDown.gif */,
 				70A5415F1C3E736A00EE3E17 /* main.m */,
 			);
@@ -246,10 +249,11 @@
 			files = (
 				376105D71D2B646D00DF3435 /* Main.storyboard in Resources */,
 				70A5416E1C3E736A00EE3E17 /* LaunchScreen.storyboard in Resources */,
+				BFB1F4EC1DF6AC63005DB822 /* shop@3x.png in Resources */,
 				70A5416B1C3E736A00EE3E17 /* Assets.xcassets in Resources */,
 				37590F671D2D16AE00467010 /* CountDownCell.xib in Resources */,
-				37590F691D2D195B00467010 /* shop.png in Resources */,
 				37B431EE1D2E72DD00AA5DB5 /* countDown.gif in Resources */,
+				BFB1F4EB1DF6AC63005DB822 /* shop@2x.png in Resources */,
 				37590F621D2CC46600467010 /* CountDownInCellViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
