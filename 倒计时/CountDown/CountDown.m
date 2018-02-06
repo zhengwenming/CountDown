@@ -16,8 +16,7 @@
 @end
 
 @implementation CountDown
-- (instancetype)init
-{
+- (instancetype)init{
     self = [super init];
     if (self) {
         self.dateFormatter=[[NSDateFormatter alloc] init];
@@ -30,7 +29,6 @@
 
 -(void)countDownWithStratDate:(NSDate *)startDate finishDate:(NSDate *)finishDate completeBlock:(void (^)(NSInteger day,NSInteger hour,NSInteger minute,NSInteger second))completeBlock{
     if (_timer==nil) {
-        
         NSTimeInterval timeInterval =[finishDate timeIntervalSinceDate:startDate];
         __block int timeout = timeInterval; //倒计时时间
         if (timeout!=0) {
@@ -75,14 +73,13 @@
 -(NSDate *)dateWithLongLong:(long long)longlongValue{
     long long value = longlongValue/1000;
     NSNumber *time = [NSNumber numberWithLongLong:value];
-    //转换成NSTimeInterval
-    NSTimeInterval nsTimeInterval = [time longValue];
+    //转换成NSTimeInterval,用longLongValue，防止溢出
+    NSTimeInterval nsTimeInterval = [time longLongValue];
     NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:nsTimeInterval];
     return date;
 }
 -(void)countDownWithStratTimeStamp:(long long)starTimeStamp finishTimeStamp:(long long)finishTimeStamp completeBlock:(void (^)(NSInteger day,NSInteger hour,NSInteger minute,NSInteger second))completeBlock{
     if (_timer==nil) {
-        
         NSDate *finishDate = [self dateWithLongLong:finishTimeStamp];
         NSDate *startDate  = [self dateWithLongLong:starTimeStamp];
         NSTimeInterval timeInterval =[finishDate timeIntervalSinceDate:startDate];
@@ -122,9 +119,7 @@
     NSDateFormatter *formatDay = [[NSDateFormatter alloc] init];
     formatDay.dateFormat = @"yyyy-MM-dd";
     NSString *dayStr = [formatDay stringFromDate:now];
-    
     return dayStr;
-    
 }
 /**
  *  主动销毁定时器
@@ -139,6 +134,5 @@
 
 -(void)dealloc{
     NSLog(@"%s dealloc",object_getClassName(self));
-    
 }
 @end

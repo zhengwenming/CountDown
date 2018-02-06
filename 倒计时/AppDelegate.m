@@ -14,7 +14,15 @@
 
 @implementation AppDelegate
 
-
+- (void)backgroundHandler {
+    __weak __typeof__ (self) weakSelf = self;
+    self.backtaskIdentifier = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+        __strong __typeof (weakSelf) strongSelf = weakSelf;
+        [[UIApplication sharedApplication] endBackgroundTask:strongSelf.backtaskIdentifier];
+        strongSelf.backtaskIdentifier = UIBackgroundTaskInvalid;
+        [[UIApplication sharedApplication] clearKeepAliveTimeout];
+    }];
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [UINavigationBar appearance].translucent = NO;
     return YES;
@@ -26,8 +34,16 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    NSInteger messageCount= [UIApplication sharedApplication].applicationIconBadgeNumber;
+    [UIApplication sharedApplication].applicationIconBadgeNumber= messageCount;
+    BOOL backgroundAccepted = [[UIApplication sharedApplication] setKeepAliveTimeout:600 handler:^{
+        [self backgroundHandler];
+    }];
+    if (backgroundAccepted)
+    {
+        NSLog(@"backgrounding accepted");
+    }
+    [self backgroundHandler];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {

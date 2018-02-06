@@ -36,7 +36,6 @@
     NSDateFormatter *formatDay = [[NSDateFormatter alloc] init];
     formatDay.dateFormat = @"yyyy-MM-dd";
     NSString *dayStr = [formatDay stringFromDate:now];
-    
     return dayStr;
     
 }
@@ -138,10 +137,8 @@
 -(void)fetchCoder:(UIButton *)sender{
     //    60s的倒计时
     NSTimeInterval aMinutes = 60;
-    
     //    1个小时的倒计时
     //    NSTimeInterval anHour = 60*60;
-    
     //     1天的倒计时
     //    NSTimeInterval aDay = 24*60*60;
     [self startWithStartDate:[NSDate date] finishDate:[NSDate dateWithTimeIntervalSinceNow:aMinutes]];
@@ -197,7 +194,6 @@
 ///此方法用两个时间戳做参数进行倒计时
 -(void)startLongLongStartStamp:(long long)strtLL longlongFinishStamp:(long long)finishLL{
     __weak __typeof(self) weakSelf= self;
-
     [_countDownForLabel countDownWithStratTimeStamp:strtLL finishTimeStamp:finishLL completeBlock:^(NSInteger day, NSInteger hour, NSInteger minute, NSInteger second) {
         NSLog(@"666");
         [weakSelf refreshUIDay:day hour:hour minute:minute second:second];
@@ -206,7 +202,6 @@
 //此方法用两个NSDate对象做参数进行倒计时
 -(void)startWithStartDate:(NSDate *)strtDate finishDate:(NSDate *)finishDate{
     __weak __typeof(self) weakSelf= self;
-
     [_countDownForBtn countDownWithStratDate:strtDate finishDate:finishDate completeBlock:^(NSInteger day, NSInteger hour, NSInteger minute, NSInteger second) {
         NSLog(@"second = %li",second);
         NSInteger totoalSecond =day*24*60*60+hour*60*60 + minute*60+second;
@@ -220,8 +215,6 @@
         
         }];
 }
-
-
 -(void)dealloc{
     [_countDownForLabel destoryTimer];
     [_countDownForBtn destoryTimer];
